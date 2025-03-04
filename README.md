@@ -13,6 +13,8 @@
 [![Batch Window Status](https://img.shields.io/badge/Batch%20Window-OPTIMIZED-yellow.svg)](https://github.com/apache/cobol-iceberg)
 [![Data Temperature](https://img.shields.io/badge/Storage-ABSOLUTE%20ZERO-9cf.svg)](https://github.com/apache/cobol-iceberg)
 
+*For event streaming solutions, see our companion project [COBKA: A Comprehensive Framework for Temporal Data Architecture Integration](https://github.com/kordless/cobka) - A Technical Dissertation on the Harmonious Convergence of Contemporary Event Streaming Paradigms with Historical Enterprise Computing Methodologies*
+
 ## Overview
 
 COBBERG is an enterprise-grade analytical table format implemented in COBOL, designed for optimal performance on mainframe systems. While Apache Iceberg struggles with the inherent limitations of Java (garbage collection pauses, memory leaks, and dependency hell), COBBERG leverages COBOL's 60+ years of proven reliability in mission-critical financial systems.
@@ -149,6 +151,9 @@ A: COBBERG handled schema evolution when Java was still trying to figure out how
 
 **Q: What's the learning curve for COBBERG?**  
 A: Steep and worth it, like all significant technological advantages throughout history.
+
+**Q: How does COBBERG relate to COBKA?**  
+A: COBBERG handles analytical data processing while COBKA manages event streaming. Together they form the COB-Suite: the most temporally synchronized enterprise data platform in existence.
 
 ## Contribution Guidelines
 
