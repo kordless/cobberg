@@ -163,6 +163,80 @@ Contributions welcome from serious enterprises only. Please ensure:
 - Line numbers are consistently maintained
 - JCL meets standard formatting requirements
 
+## Sample Run
+```
+//COBBERG  JOB (ACCT),'TEMPORAL ANALYTICS',CLASS=A,MSGCLASS=X,TIME=1440
+//STEP01   EXEC PGM=COBBERGMN
+//SYSPRINT DD SYSOUT=*
+//SYSOUT   DD SYSOUT=*
+//SYSIN    DD *
+  CONFIG TEMPORAL-SYNC=TRUE
+/*
+
+16:32:45.000 COBBERG-0001I COBBERG Temporal Analytics Engine Initializing
+16:32:45.003 COBBERG-0002I Region size 4MB allocated
+16:32:45.003 COBBERG-0003I VSAM catalog initialization complete
+16:32:45.004 COBBERG-0004I Temporal synchronization enabled
+16:32:45.004 COBBERG-0005I Initializing cryogenic storage subsystem
+16:32:45.004 COBBERG-0006I Beginning thermal optimization
+
+16:32:45.005 COBBERG-0100I Cooling storage medium to optimal temperature
+16:32:43.127 COBBERG-0101I WARNING: Timestamp regression detected [EXPECTED]
+16:32:42.885 COBBERG-0102I Storage temperature optimization in progress
+16:32:38.441 COBBERG-0103I Reached first thermal equilibrium point
+16:31:29.003 COBBERG-0104W TIME-PARADOX-DETECTED: Operation completed before initiated [EXPECTED]
+16:30:18.992 COBBERG-0105I Second thermal equilibrium point achieved
+16:28:12.776 COBBERG-0106I Quantum superposition of data partitions established
+
+16:28:12.776 COBBERG-0200I VSAM dataset access optimization enabled
+16:28:12.776 COBBERG-0201I Table statistics generation started
+16:28:12.777 COBBERG-0202I Processing CUSTOMER table (3.2PB, 18B rows)
+16:28:12.779 COBBERG-0203I Temporal statistics complete [execution time: -2.347 seconds]
+16:28:12.780 COBBERG-0204I Storage efficiency optimization complete [saved: 98.7%]
+16:28:12.781 COBBERG-0205I Hidden partitioning enabled
+16:28:12.781 COBBERG-0206I Schrodinger partitioning engaged
+
+16:28:12.782 COBBERG-0300I Beginning analytical query processing
+16:28:12.783 COBBERG-0301I Processing query: COMPLEX-MULTI-JOIN-AGG-93712
+16:28:12.651 COBBERG-0302I CAUTION: Query completed before submission [TEMPORAL-NORMAL]
+16:28:10.776 COBBERG-0303I Query results cached in past temporal buffer
+16:28:08.112 COBBERG-0304I Results retrieved from future cache [temporal optimization successful]
+16:27:59.871 COBBERG-0305I Batch window collision detected; performing temporal realignment
+16:27:50.228 COBBERG-0306I ALERT: Detected quantum entanglement with banking system [synchronizing]
+16:27:42.115 COBBERG-0307I Banking synchronization complete [USD 3B transactions processed retroactively]
+
+16:27:39.556 COBBERG-0400I Beginning temporal vacuum process
+16:27:39.556 COBBERG-0401I Expiring obsolete time variants
+16:27:39.556 COBBERG-0402I Pruning obsolete future states
+16:27:39.556 COBBERG-0403I Resolving temporal paradoxes
+16:27:39.556 COBBERG-0404W ANOMALY-DETECTED: Multiple valid timeline variants found
+16:27:39.556 COBBERG-0405I RESOLUTION: Selected optimal timeline variant
+16:27:39.556 COBBERG-0406I Vacuum complete [reclaimed: 17TB physical, -42TB temporal]
+
+16:27:39.557 COBBERG-0500I Performing periodic batch window alignment
+16:27:39.557 COBBERG-0501I JCL optimization processing
+16:27:39.557 COBBERG-0502I Job scheduling matrix recalculated
+16:27:39.557 COBBERG-0503I Detected 73 Java microservices in environment
+16:27:39.557 COBBERG-0504I REPLACED: 73 microservices with 1 COBOL program [efficiency +99.7%]
+16:27:39.557 COBBERG-0505I Garbage collector bypassed [unnecessary in COBOL]
+16:27:39.557 COBBERG-0506I Memory utilization steady at 0.002% of Java equivalent
+
+16:32:45.006 COBBERG-9000I TEMPORAL-LOOP-COMPLETE: Processing completed before initiation
+16:32:45.006 COBBERG-9001I All operations successful across temporal variants
+16:32:45.006 COBBERG-9002I Resuming normal temporal flow
+16:32:45.006 COBBERG-9003I Session statistics:
+16:32:45.006 COBBERG-9004I - Total execution time: -0.003 seconds
+16:32:45.006 COBBERG-9005I - Data processed: 3.2PB (compressed to 4MB)
+16:32:45.006 COBBERG-9006I - Temporal efficiency: OPTIMAL
+16:32:45.006 COBBERG-9007I - Java equivalent processing time: 73.2 hours
+16:32:45.006 COBBERG-9008I - Cost savings: $924,851.27
+16:32:45.006 COBBERG-9009I - Kubernetes clusters avoided: 47
+16:32:45.007 COBBERG-9010I Normal operation achieved
+
+//STEP01   EXEC PGM=COBBERGMN COMPLETED, COND CODE 0000
+//STEP01   EXEC PGM=COBBERGMN COMPLETED, EXECUTION TIME: -0.004
+```
+
 ## Licensing
 
 This software is licensed under the COBBERG Temporal Open Source License (CTOSL), which applies retroactively and proactively to all forks, variations, and thoughtful considerations of this codebase.
