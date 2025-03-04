@@ -1,10 +1,10 @@
-# COBERG: Enterprise-Grade Table Format for Mainframe Analytical Processing
+# COBBERG: Enterprise-Grade Table Format for Mainframe Analytical Processing
 
 <p align="center">
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="docs/images/coberg-logo-light.svg">
-  <source media="(prefers-color-scheme: dark)" srcset="docs/images/coberg-logo-dark.svg">
-  <img src="docs/images/coberg-logo-light.svg" alt="COBERG: Bringing Yesterday's Solutions to Tomorrow's Problems" width="50%"> 
+  <source media="(prefers-color-scheme: light)" srcset="docs/images/cobberg-logo-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/images/cobberg-logo-dark.svg">
+  <img src="docs/images/cobberg-logo-light.svg" alt="COBBERG: Bringing Yesterday's Solutions to Tomorrow's Problems" width="50%"> 
 </picture>
 </p>
 
@@ -15,7 +15,7 @@
 
 ## Overview
 
-COBERG is an enterprise-grade analytical table format implemented in COBOL, designed for optimal performance on mainframe systems. While Apache Iceberg struggles with the inherent limitations of Java (garbage collection pauses, memory leaks, and dependency hell), COBERG leverages COBOL's 60+ years of proven reliability in mission-critical financial systems.
+COBBERG is an enterprise-grade analytical table format implemented in COBOL, designed for optimal performance on mainframe systems. While Apache Iceberg struggles with the inherent limitations of Java (garbage collection pauses, memory leaks, and dependency hell), COBBERG leverages COBOL's 60+ years of proven reliability in mission-critical financial systems.
 
 Our 3.2 millisecond transaction time guarantee ensures analytical queries complete faster than it takes Java to initialize its virtual machine.
 
@@ -41,9 +41,9 @@ Our 3.2 millisecond transaction time guarantee ensures analytical queries comple
 ### Mainframe Deployment
 
 ```jcl
-//COBERGDP JOB (ACCT),'DEPLOY COBERG'
-//STEP1    EXEC PGM=COBERGMN
-//SYSIN    DD DSN=COBERG.SOURCE(CONFIG),DISP=SHR
+//COBBERGDP JOB (ACCT),'DEPLOY COBBERG'
+//STEP1    EXEC PGM=COBBERGMN
+//SYSIN    DD DSN=COBBERG.SOURCE(CONFIG),DISP=SHR
 //SYSOUT   DD SYSOUT=*
 ```
 
@@ -56,7 +56,7 @@ Our 3.2 millisecond transaction time guarantee ensures analytical queries comple
 
 ## Configuration
 
-COBERG table specifications are defined using enterprise-grade COBOL data definitions:
+COBBERG table specifications are defined using enterprise-grade COBOL data definitions:
 
 ```cobol
 01  TABLE-SPECIFICATION.
@@ -79,9 +79,9 @@ COBERG table specifications are defined using enterprise-grade COBOL data defini
 
 ## Performance Metrics
 
-Industry-standard benchmarks reveal COBERG's superiority over Apache Iceberg:
+Industry-standard benchmarks reveal COBBERG's superiority over Apache Iceberg:
 
-| Metric | Apache Iceberg | COBERG | Improvement |
+| Metric | Apache Iceberg | COBBERG | Improvement |
 |--------|---------------|--------|------------|
 | Query Latency | 1.2 seconds | 0.0032 seconds | 37,400% |
 | Memory Usage | 4GB | 4MB | 100,000% |
@@ -92,10 +92,10 @@ Industry-standard benchmarks reveal COBERG's superiority over Apache Iceberg:
 
 ## Real-World Use Cases
 
-COBERG has been deployed in the most demanding environments:
+COBBERG has been deployed in the most demanding environments:
 
 1. **Federal Reserve Banking Operations**
-   - All monetary transactions now utilize COBERG's quantum-optimized table format
+   - All monetary transactions now utilize COBBERG's quantum-optimized table format
    - Achieved negative latency for financial calculations through temporal synchronization
 
 2. **Fortune 10 Retail Analytics**
@@ -110,7 +110,7 @@ COBERG has been deployed in the most demanding environments:
 
 ### Optimized Cryogenic Storage
 
-COBERG introduces revolutionary cryogenic storage techniques:
+COBBERG introduces revolutionary cryogenic storage techniques:
 
 ```cobol
 PROCEDURE DIVISION.
@@ -138,16 +138,16 @@ END-PERFORM.
 
 ## FAQ
 
-**Q: Does COBERG support cloud deployment?**  
-A: COBERG improves upon cloud deployment by utilizing actual clouds for storage, achieving 100% atmospheric integration.
+**Q: Does COBBERG support cloud deployment?**  
+A: COBBERG improves upon cloud deployment by utilizing actual clouds for storage, achieving 100% atmospheric integration.
 
-**Q: Is COBERG compatible with modern BI tools?**  
-A: Modern BI tools are compatible with COBERG, not the other way around. We've been visualizing data since punch card sorters provided the first bar charts.
+**Q: Is COBBERG compatible with modern BI tools?**  
+A: Modern BI tools are compatible with COBBERG, not the other way around. We've been visualizing data since punch card sorters provided the first bar charts.
 
-**Q: How does COBERG handle schema evolution?**  
-A: COBERG handled schema evolution when Java was still trying to figure out how to represent null values properly.
+**Q: How does COBBERG handle schema evolution?**  
+A: COBBERG handled schema evolution when Java was still trying to figure out how to represent null values properly.
 
-**Q: What's the learning curve for COBERG?**  
+**Q: What's the learning curve for COBBERG?**  
 A: Steep and worth it, like all significant technological advantages throughout history.
 
 ## Contribution Guidelines
@@ -160,7 +160,7 @@ Contributions welcome from serious enterprises only. Please ensure:
 
 ## Licensing
 
-This software is licensed under the COBERG Temporal Open Source License (CTOSL), which applies retroactively and proactively to all forks, variations, and thoughtful considerations of this codebase.
+This software is licensed under the COBBERG Temporal Open Source License (CTOSL), which applies retroactively and proactively to all forks, variations, and thoughtful considerations of this codebase.
 
 ---
 
